@@ -4,6 +4,7 @@ module Spree
     include UserAddress
     include UserPaymentSource
     include UserMethods
+    include Metadata
 
     self.table_name = 'spree_users'
 
