@@ -1,5 +1,5 @@
 shared_examples_for 'metadata' do |factory: described_class.name.demodulize.downcase.to_sym|
-  subject(:instance) { FactoryBot.build(factory) }
+  subject(:instance) { FactoryBot.create(factory) }
 
   it { expect(instance.has_attribute?(:public_metadata)).to be_truthy }
   it { expect(instance.has_attribute?(:private_metadata)).to be_truthy }
