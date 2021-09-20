@@ -17,6 +17,7 @@ class Spree::Base < ApplicationRecord
   end
 
   self.abstract_class = true
+  self.implicit_order_column = 'created_at'
 
   def self.belongs_to_required_by_default
     false
