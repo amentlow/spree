@@ -44,6 +44,8 @@ describe Spree::Payment, type: :model do
     allow(payment.log_entries).to receive(:create!)
   end
 
+  it_behaves_like 'metadata'
+
   describe 'Constants' do
     it { expect(Spree::Payment::INVALID_STATES).to eq(%w(failed invalid)) }
   end
